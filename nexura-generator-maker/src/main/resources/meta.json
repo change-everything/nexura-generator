@@ -6,8 +6,9 @@
   "author": "peiYP",
   "createTime": "2023-11-22",
   "fileConfig": {
-    "inputRootPath": "D:/myProject/nexura-generator/nexura-generator-demo-project/acm-template-pro/",
+    "inputRootPath": ".source/acm-template-pro",
     "outputRootPath": "D:/myProject/nexura-generator/generator",
+    "sourceRootPath": "D:/myProject/nexura-generator/nexura-generator-demo-project/acm-template-pro",
     "type": "dir",
     "files": [
       {
