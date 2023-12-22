@@ -6,8 +6,8 @@
   "author": "peiYP",
   "createTime": "2023-11-22",
   "fileConfig": {
-    "inputRootPath": "/Users/yupi/Code/yuzi-generator/yuzi-generator-demo-projects/acm-template-pro",
-    "outputRootPath": "generated",
+    "inputRootPath": "D:/myProject/nexura-generator/nexura-generator-demo-project/acm-template-pro/",
+    "outputRootPath": "D:/myProject/nexura-generator/generator",
     "type": "dir",
     "files": [
       {

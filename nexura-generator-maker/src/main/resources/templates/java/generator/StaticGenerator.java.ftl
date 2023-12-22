@@ -1,12 +1,12 @@
-package cn.nexura.maker.generaror.file;
+package ${basePackage}.generator.file;
 
 import cn.hutool.core.io.FileUtil;
 
+
 /**
  * @author PeiYP
- * @since 2023年12月20日 15:04
  */
-public class StaticFileGenerator {
+public class StaticGenerator {
 
 
     /**
