@@ -2,7 +2,7 @@ package cn.nexura.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.nexura.generaror.MainGenerator;
-import cn.nexura.model.MainTemplateConfig;
+import cn.nexura.model.DataModel;
 import lombok.Data;
 import picocli.CommandLine.*;
 
@@ -27,7 +27,7 @@ public class GenerateCommand implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
+        DataModel mainTemplateConfig = new DataModel();
         BeanUtil.copyProperties(this, mainTemplateConfig);
         System.out.println("配置信息 = " + mainTemplateConfig);
         MainGenerator.doGenerate(mainTemplateConfig);

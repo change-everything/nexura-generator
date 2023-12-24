@@ -1,4 +1,4 @@
-package cn.nexura.maker.model;
+package cn.nexura.model;
 
 import lombok.Data;
 
@@ -8,8 +8,9 @@ import lombok.Data;
  */
 @Data
 public class DataModel {
-    private boolean needGit;
     private boolean loop;
+
+    private boolean needGit;
 
     /**
      * 核心模板

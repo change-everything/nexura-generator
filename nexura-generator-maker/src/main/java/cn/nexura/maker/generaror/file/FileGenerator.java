@@ -34,12 +34,4 @@ public class FileGenerator {
         DynamicFileGenerator.doGenerate(inputDynamicFilePath, outputDynamicFilePath, model);
     }
 
-    public static void main(String[] args) throws TemplateException, IOException {
-        DataModel mainTemplateConfig = new DataModel();
-        mainTemplateConfig.setAuthor("yupi");
-        mainTemplateConfig.setLoop(false);
-        mainTemplateConfig.setOutputText("求和结果：");
-        doGenerate(mainTemplateConfig);
-    }
-
 }

@@ -1,6 +1,6 @@
 package cn.nexura.generaror;
 
-import cn.nexura.model.MainTemplateConfig;
+import cn.nexura.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.File;
@@ -37,14 +37,6 @@ public class MainGenerator {
         inputPath = new File(inputRootPath, "README.md").getAbsolutePath();
         outputPath = new File(outputRootPath, "README.md").getAbsolutePath();
         StaticGenerator.copyFiles(inputPath, outputPath);
-    }
-
-    public static void main(String[] args) throws TemplateException, IOException {
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        mainTemplateConfig.setAuthor("yupi");
-        mainTemplateConfig.setLoop(false);
-        mainTemplateConfig.setOutputText("求和结果：");
-        doGenerate(mainTemplateConfig);
     }
 
 }

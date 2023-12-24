@@ -1,6 +1,6 @@
 package cn.nexura.generaror;
 
-import cn.nexura.model.MainTemplateConfig;
+import cn.nexura.model.DataModel;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -15,19 +15,6 @@ import java.io.Writer;
  * @since 2023年12月20日 17:09
  */
 public class DynamicGenerator {
-
-    public static void main(String[] args) throws IOException, TemplateException {
-
-        String projectPath = System.getProperty("user.dir");
-        String inputPath = projectPath + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
-        String outputPath = projectPath + File.separator + "MainTemplate.java";
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        mainTemplateConfig.setAuthor("yupi");
-        mainTemplateConfig.setLoop(false);
-        mainTemplateConfig.setOutputText("求和结果：");
-        doGenerate(inputPath, outputPath, mainTemplateConfig);
-
-    }
 
     /**
      * 生成文件
@@ -53,11 +40,6 @@ public class DynamicGenerator {
         String templateName = new File(inputPath).getName();
         Template template = configuration.getTemplate(templateName);
 
-        // 创建数据模型
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        mainTemplateConfig.setAuthor("yupi");
-        mainTemplateConfig.setLoop(false);
-        mainTemplateConfig.setOutputText("求和结果：");
 
         // 生成
         Writer out = new FileWriter(outputPath);
