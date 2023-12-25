@@ -1,6 +1,5 @@
 package cn.nexura.maker.generaror.file;
 
-import cn.nexura.maker.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.File;

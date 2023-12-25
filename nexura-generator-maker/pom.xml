@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.nexura</groupId>
-    <artifactId>acm-template-pro-generator</artifactId>
+    <artifactId>nexura-generator-maker</artifactId>
     <version>1.0</version>
 
     <properties>

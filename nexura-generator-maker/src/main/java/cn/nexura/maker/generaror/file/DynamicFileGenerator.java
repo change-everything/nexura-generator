@@ -1,7 +1,6 @@
 package cn.nexura.maker.generaror.file;
 
 import cn.hutool.core.io.FileUtil;
-import cn.nexura.maker.model.DataModel;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
