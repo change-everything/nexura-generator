@@ -25,6 +25,7 @@ public class TemplateMakerFileConfig {
         private List<FileFilterConfig> filterConfigList;
     }
 
+    @Data
     public static class FileGroupConfig {
         private String condition;
         private String groupKey;
