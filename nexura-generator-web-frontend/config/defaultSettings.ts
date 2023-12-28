@@ -15,7 +15,7 @@ const Settings: ProLayoutProps & {
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: '鱼皮前端万用模板',
+  title: 'nexura 模板仓库',
   pwa: true,
   iconfontUrl: '',
   token: {
