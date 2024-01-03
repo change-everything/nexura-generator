@@ -7,7 +7,7 @@ export default [
       { path: '/user/register', component: './User/Register' },
     ],
   },
-  { path: '/welcome', icon: 'smile', component: './Welcome', name: "欢迎页" },
+  { path: '/', icon: 'home', component: './Index', name: '主页' },
   {
     path: '/admin',
     icon: 'crown',
@@ -24,6 +24,6 @@ export default [
       },
     ],
   },
-  { path: '/', redirect: '/welcome' },
+  { path: '/', redirect: '/home' },
   { path: '*', layout: false, component: './404' },
 ];

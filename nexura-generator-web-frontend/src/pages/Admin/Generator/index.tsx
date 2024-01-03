@@ -1,12 +1,12 @@
-import CreateModal from '@/pages/Admin/Generator/components/CreateModal';
-import UpdateModal from '@/pages/Admin/Generator/components/UpdateModal';
-import { deleteGenerator, listGeneratorByPage } from '@/services/backend/generatorController';
+import { deleteGeneratorUsingPOST, listGeneratorByPageUsingPOST } from '@/services/backend/generatorController';
 import { PlusOutlined } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable } from '@ant-design/pro-components';
 import '@umijs/max';
 import { Button, message, Select, Space, Tag, Typography } from 'antd';
 import React, { useRef, useState } from 'react';
+import CreateModal from "@/pages/Admin/Generator/components/CreateModal";
+import UpdateModal from "@/pages/Admin/Generator/components/UpdateModal";
 
 /**
  * 生成器管理页面
@@ -31,7 +31,7 @@ const GeneratorAdminPage: React.FC = () => {
     const hide = message.loading('正在删除');
     if (!row) return true;
     try {
-      await deleteGenerator({
+      await deleteGeneratorUsingPOST({
         id: row.id as any,
       });
       hide();
@@ -44,6 +44,7 @@ const GeneratorAdminPage: React.FC = () => {
       return false;
     }
   };
+
 
   /**
    * 表格列配置
@@ -100,6 +101,7 @@ const GeneratorAdminPage: React.FC = () => {
         });
       },
     },
+
     {
       title: '文件配置',
       dataIndex: 'fileConfig',
@@ -179,6 +181,7 @@ const GeneratorAdminPage: React.FC = () => {
       ),
     },
   ];
+
   return (
     <div className="generator-admin-page">
       <Typography.Title level={4} style={{ marginBottom: 16 }}>
@@ -206,7 +209,7 @@ const GeneratorAdminPage: React.FC = () => {
           const sortField = Object.keys(sort)?.[0];
           const sortOrder = sort?.[sortField] ?? undefined;
 
-          const { data, code } = await listGeneratorByPage({
+          const { data, code } = await listGeneratorByPageUsingPOST({
             ...params,
             sortField,
             sortOrder,
@@ -221,6 +224,7 @@ const GeneratorAdminPage: React.FC = () => {
         }}
         columns={columns}
       />
+
       <CreateModal
         visible={createModalVisible}
         columns={columns}
@@ -242,4 +246,10 @@ const GeneratorAdminPage: React.FC = () => {
           actionRef.current?.reload();
         }}
         onCancel={() => {
-          export default GeneratorAdminPage;
+          setUpdateModalVisible(false);
+        }}
+      />
+    </div>
+  );
+};
+export default GeneratorAdminPage;
